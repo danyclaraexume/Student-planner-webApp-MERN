@@ -21,6 +21,7 @@ function App() {
   const [showMenu, setShowMenu] = useState(true)
   let menu
   let larger
+  const menuWidth = 2;
   if(showMenu){
     menu = <Navigation/>
     larger = 10
@@ -47,9 +48,9 @@ function App() {
             </AppBar>
           </div>
         </Grid>
-        <Grid item container>
-          <Grid item xs = '2'className="leftsidebar">{menu}</Grid> 
-          <Grid xs={larger} className='content'>
+        <Grid item container >
+          <Grid item xs ={menuWidth} className="leftsidebar">{menu}</Grid> 
+          <Grid item xs={larger} className='content'>
             <Switch>
               <Route exact path='/'>
                   <HomePage/>

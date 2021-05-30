@@ -1,6 +1,6 @@
 import React from 'react'
 import {Grid} from '@material-ui/core'
-import TaskItemList from '../../Components/ClassAssignmentsTaskItems/TaskItemList'
+import TaskItemList from '../../Components/CheckBoxTaskItems/TaskItemList'
 
 const INITIAL_TASKS = [
     {
@@ -44,11 +44,11 @@ const Assignment = () => {
     });
 
     return(
-        <Grid container spacing={2} direction="row" justify="center">
-            <Grid item={true}>
+        <Grid container spacing={2} direction="row" >
+            <Grid item={true} xs ={5}>
                 <TaskItemList items={currentTasks} title='Current Tasks' />
             </Grid>
-            <Grid item={true}>
+            <Grid item={true} xs ={5}>
                 <TaskItemList items={completedTasks} title='Completed Tasks' />
             </Grid>
         </Grid>

@@ -1,12 +1,20 @@
 import React from 'react'
-import Classtab from './HorizontalTab'
-import Paper from '@material-ui/core/Paper';
+import Classtab from '../../Components/HorizontalTab'
+import ClassSchedule from './ClassSchedule'
+import Assignment from './Assignments'
+
+
 
 const ClassRoom = () => {
+    const components = [
+        <ClassSchedule/>,
+        <Assignment/>
+    ];
+
+    const tabsLabels = ['ClassSchedule', 'Assignment'];
+
     return(
-        <Paper>
-            <Classtab/>
-        </Paper>
+        <Classtab label={tabsLabels} content={components} index={tabsLabels} />
     )
 }
 

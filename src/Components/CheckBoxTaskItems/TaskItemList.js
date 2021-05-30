@@ -1,6 +1,5 @@
 import React from 'react';
 import List from '@material-ui/core/List';
-
 import CheckBoxTaskItem from './CheckBoxTaskItem';
 
 
@@ -11,7 +10,7 @@ const TaskItemList = (props) => {
             <h3>{props.title}</h3>
             <List>  
             {props.items.map((task) => (
-                <CheckBoxTaskItem ClassCode={task.classCode} Assignment={task.assignmentTitle} date={task.dueDate} />
+                <CheckBoxTaskItem key={Math.random().toString()} ClassCode={task.classCode} Assignment={task.assignmentTitle} date={task.dueDate} />
             ))}
             </List>
         </div>

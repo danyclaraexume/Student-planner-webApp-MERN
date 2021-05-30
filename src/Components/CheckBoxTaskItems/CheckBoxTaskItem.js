@@ -1,6 +1,5 @@
 import React from 'react';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import ListItemText from '@material-ui/core/ListItemText';
 import Checkbox from '@material-ui/core/Checkbox';
 
@@ -16,9 +15,7 @@ return (
     <ListItem>
         <Checkbox/>
         <ListItemText primary={props.ClassCode + ' - ' + props.Assignment}/>
-        <ListItemSecondaryAction>
-            <ListItemText secondary={taskDate}/>
-        </ListItemSecondaryAction>
+        <ListItemText secondary={taskDate}/>
     </ListItem>
 );
 };
