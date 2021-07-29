@@ -1,36 +1,60 @@
-import React from 'react';
+import React, {useState} from 'react';
 import List from '@material-ui/core/List';
+import {Grid} from '@material-ui/core'
 import TaskItem from './TaskItem';
 
+const TaskItemList = (props) => {  
+    const [tasks, setTasks] = useState(props.INITIAL_TASKS);
 
-const TaskItemList = (props) => {    
-    const onChangeHandler = (isChecked) =>{
-        const anObject = {
-            id: isChecked.id,
-            newChecked:isChecked.newChecked
-        };
-        props.OnItemChanged(anObject);
+    const toggleTaskCompleted = (id) => {
+        const updatedTasks = tasks.map(task => {
+            if (id === task.id)
+              return {...task, completed: !task.completed}
+            return task;
+          });
+          setTasks(updatedTasks);
+    }
 
-        return(anObject.newChecked);
-    };
+    const activetaskList = tasks.filter(task => task.completed === false).map(task => (        
+        <TaskItem 
+            key={task.id} 
+            id={task.id}
+            ClassCode={task.classCode} 
+            assignment={task.assignmentTitle} 
+            date={task.dueDate} 
+            completed={task.completed}
+            toggleTaskCompleted={toggleTaskCompleted} 
+        />
+    ));
 
-    let changedCheck = onChangeHandler;
+    const completedtaskList = tasks.filter(task => task.completed === true).map(task => (        
+        <TaskItem 
+            key={task.id} 
+            id={task.id}
+            ClassCode={task.classCode} 
+            assignment={task.assignmentTitle} 
+            date={task.dueDate} 
+            completed={task.completed}
+            toggleTaskCompleted={toggleTaskCompleted} 
+        />
+    ));
 
-    return(
-        <div>
-            <h3>{props.title}</h3>
-            <List>  
-            {props.items.map((task) => (
-                <TaskItem 
-                    key={Math.random().toString()} 
-                    id={task.id}
-                    ClassCode={task.classCode} 
-                    assignment={task.assignmentTitle} 
-                    date={task.dueDate} 
-                    defaultChecked={task.checked} checked={changedCheck} />
-            ))}
+    return (
+        <Grid container spacing={2} direction="row" >
+            <Grid item={true} xs ={5}>
+                <h2>{props.ActiveTasksLabel}</h2>
+                <List>
+                    {activetaskList}
+                </List>
+            </Grid>
+            <Grid item={true} xs ={5}>
+            <h2>{props.CompletedTasksLabel}</h2>
+            <List>
+                {completedtaskList}
             </List>
-        </div>
-    )};
+            </Grid>
+        </Grid>
+    )    
+};
 
 export default TaskItemList;

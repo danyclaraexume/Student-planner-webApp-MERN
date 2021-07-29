@@ -1,21 +1,24 @@
 import './App.css';
 import React, {useState}  from 'react'
 import {Grid} from '@material-ui/core'
-import Navigation   from './Components/Navigation'
-import HomePage     from './Views/HomeView/Home'
-import ClassPage    from './Views/ClassRoomView/ClassContent'
-import ProgressPage from './Views/ProgressView/ProgressContent'
 import AppBar       from '@material-ui/core/AppBar';
 import Toolbar      from '@material-ui/core/Toolbar';
 import Typography   from '@material-ui/core/Typography';
 import Button       from '@material-ui/core/Button';
 import IconButton   from '@material-ui/core/IconButton';
 import MenuIcon     from '@material-ui/icons/Menu';
+
 import {
   BrowserRouter as Router,
   Switch,
   Route
  } from 'react-router-dom'
+
+import Navigation   from './Components/Navigation'
+import HomePage     from './Views/HomeView/Home'
+import ClassPage    from './Views/ClassRoomView/ClassContent'
+import ProgressPage from './Views/ProgressView/ProgressContent'
+
 
 function App() {
   const [showMenu, setShowMenu] = useState(true)
