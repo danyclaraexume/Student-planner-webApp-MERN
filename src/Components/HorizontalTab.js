@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
 const PageTabs = (props) => {
-    const [selectedTab, setSelectedTab] = React.useState(0);
+    const [selectedTab, setSelectedTab] = useState(0);
 
     const handleChange = (event, newValue) => {
         setSelectedTab(newValue);
@@ -26,7 +26,7 @@ const PageTabs = (props) => {
                 
             ))}
         </div>
-  );
+    );
 }
 
 export default PageTabs;

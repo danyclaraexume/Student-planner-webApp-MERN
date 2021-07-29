@@ -13,8 +13,7 @@ import { appointments } from './month-appointments';
 const SchedulerClass = () => {
     return(
         <div>
-            <Scheduler data={appointments}>
-                
+            <Scheduler data={appointments}>  
                 <MonthView />
                 <Appointments />
             </Scheduler>
