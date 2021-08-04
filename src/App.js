@@ -18,6 +18,7 @@ import Navigation   from './Components/NavigationBar/Navigation'
 import HomePage     from './Views/HomeView/Home'
 import ClassPage    from './Views/ClassRoomView/ClassContent'
 import ProgressPage from './Views/ProgressView/ProgressContent'
+// import Header       from './Components/Header/Header'
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
@@ -33,15 +34,15 @@ function App() {
       <Grid container direction="column">
         <Grid item className='header'>
           <div>
-            <AppBar position="static">
+            <AppBar position="static"  style={{backgroundColor:'rgb(67, 76, 83)'}}>
               <Toolbar>
                 <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleHideMenu}>
                   <MenuIcon />
                 </IconButton>
-                <Typography variant="h6">
+                <Typography variant="h6" style={{width:'70%', textAlign:'center'}}>
                   Effi-Study
                 </Typography>
-                <Button color="inherit">Login</Button>
+                <Button color="inherit" style={{float:'right',width:'30%', paddingLeft:'20%', paddingRight: '1%'}}>Login</Button>
               </Toolbar>
             </AppBar>
           </div>

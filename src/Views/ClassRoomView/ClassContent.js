@@ -1,5 +1,5 @@
 import React from 'react'
-import MuiTab from '../../Components/TabBar/HorizontalTab'
+import MuiTab from '../../Components/HorizontalTabBar/HorizontalTab'
 import ClassSchedule from './ClassSchedule'
 import Assignment from './Assignments'
 import ExamTab from './Exam'

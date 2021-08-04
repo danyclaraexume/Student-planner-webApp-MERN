@@ -1,0 +1,97 @@
+.sidebar {
+    border:solid 1px rgb(87, 92, 98);
+    width: 20%;
+    background-color: rgb(175, 195, 202);
+    float:left;
+    height: 99vh;
+}
+
+.notesHeader {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-shadow: 2px 2px 2px;
+    background-color: rgb(140, 153, 158);
+}
+
+.noteItem {
+    padding: 1rem;
+    border-bottom: solid 1px grey;
+}
+
+.noteItem button{
+    float: right;
+}
+
+.noteItem p {
+    margin-top: 0;
+    color: rgb(41, 42, 42);
+}
+
+
+
+button {
+    background: none;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: inherit;
+    cursor: pointer;
+    color: rgb(3, 74, 110);
+  }
+  button:hover {
+    color: rgb(86, 90, 95);
+  }
+
+/* --------------------------------------------------------------------------- */
+
+.no-active-note {
+    border: solid 1px rgb(122, 122, 122);
+    padding-left: 50%;
+    box-shadow: 2px 2px 2px 2px;
+    font-size: 24px;
+    text-shadow: 1px 1px #066a99;
+    height: 98vh;
+
+}
+
+.note-editor-wrapper {
+   background-color:  rgba(63, 74, 78, 0.623);
+    width: 75%;
+    padding-left: 1rem;
+    float:left;
+    height: 100vh;
+}
+
+.note-editor, .note-preview {
+    height: 50vh;
+    padding: 1rem;
+}
+
+.note-editor input {
+    height: 50px;
+    font-size: 2rem;
+  }
+
+.note-editor input,
+textarea {
+  display: block;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  width: 98%;
+  padding: 10px;
+  resize: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+textarea {
+    height: 40vh;
+}
+
+.note-preview {
+    width: 98%;
+}
+
