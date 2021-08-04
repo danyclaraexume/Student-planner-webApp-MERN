@@ -1,20 +1,24 @@
 import React from 'react'
 import MenuList from '@material-ui/core/MenuList';
 import MenuItem from '@material-ui/core/MenuItem';
-import Paper from '@material-ui/core/Paper';
 import {Link} from 'react-router-dom'
 import HomeIcon from '@material-ui/icons/Home';
 import ClassIcon from '@material-ui/icons/Class';
 import ShowChartIcon from '@material-ui/icons/ShowChart';
 import SettingsIcon from '@material-ui/icons/Settings';
+import CloseIcon from '@material-ui/icons/Close';
+import IconButton from '@material-ui/core/IconButton';
 import './Navigation.css'
 
 
-const Navigation = () =>{
+const Navigation = (props) => {
     return(
-            <Paper> 
-                <MenuList className='menu'>
-                    <MenuItem >
+            <div className="navbar"> 
+                <IconButton edge="start" aria-label="menu" onClick={props.handleHideMenu}>
+                    <CloseIcon/>
+                </IconButton>
+                <MenuList className='navbar-List' onClick={props.handleHideMenu} >
+                    <MenuItem>
                         <Link to='/' className='menuLink'><HomeIcon className='menuIcon'/><span>Home</span></Link>
                     </MenuItem>
                     <MenuItem>
@@ -27,7 +31,7 @@ const Navigation = () =>{
                         <Link to='/settings' className='menuLink'><SettingsIcon className='menuIcon'/><span>Settings</span></Link>
                     </MenuItem>
                 </MenuList>
-            </Paper>
+            </div>
     )
 }
 

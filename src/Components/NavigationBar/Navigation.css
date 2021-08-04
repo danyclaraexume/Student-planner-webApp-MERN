@@ -1,0 +1,15 @@
+.menuLink{
+    display: inline-flex;
+    text-decoration: none;
+    color: white;
+}
+
+.menuIcon{
+    margin-right:10px;
+}
+
+.navbar {
+   border: solid 1px red;
+   display: flex;
+   justify-content: center;
+}

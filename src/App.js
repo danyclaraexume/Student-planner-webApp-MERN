@@ -14,23 +14,18 @@ import {
   Route
  } from 'react-router-dom'
 
-import Navigation   from './Components/Navigation'
+import Navigation   from './Components/NavigationBar/Navigation'
 import HomePage     from './Views/HomeView/Home'
 import ClassPage    from './Views/ClassRoomView/ClassContent'
 import ProgressPage from './Views/ProgressView/ProgressContent'
 
-
 function App() {
-  const [showMenu, setShowMenu] = useState(true)
-  let menu
-  let larger
+  const [showMenu, setShowMenu] = useState(false);
+  const larger = 12;
   const menuWidth = 2;
-  if(showMenu){
-    menu = <Navigation/>
-    larger = 10
-  }
-  else {
-    larger = 12
+
+  const handleHideMenu = () => {
+    setShowMenu(!showMenu);
   }
 
   return (
@@ -40,7 +35,7 @@ function App() {
           <div>
             <AppBar position="static">
               <Toolbar>
-                <IconButton edge="start" color="inherit" aria-label="menu" onClick={() => setShowMenu(!showMenu)}>
+                <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleHideMenu}>
                   <MenuIcon />
                 </IconButton>
                 <Typography variant="h6">
@@ -52,7 +47,7 @@ function App() {
           </div>
         </Grid>
         <Grid item container >
-          <Grid item xs ={menuWidth} className="leftsidebar">{menu}</Grid> 
+          <Grid item xs ={menuWidth} className={showMenu ? "leftsidebar active": "leftsidebar"}><Navigation handleHideMenu ={handleHideMenu} /></Grid> 
           <Grid item xs={larger} className='content'>
             <Switch>
               <Route exact path='/'>
@@ -76,4 +71,4 @@ function App() {
   );
 }
 
-export default App;
+export default (App);

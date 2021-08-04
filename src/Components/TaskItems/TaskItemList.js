@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import List from '@material-ui/core/List';
 import {Grid} from '@material-ui/core'
 import TaskItem from './TaskItem';
+import './TaskItems.css'
 
 const TaskItemList = (props) => {  
     const [tasks, setTasks] = useState(props.INITIAL_TASKS);
@@ -40,14 +41,14 @@ const TaskItemList = (props) => {
     ));
 
     return (
-        <Grid container spacing={2} direction="row" >
-            <Grid item={true} xs ={5}>
+        <Grid container  spacing={1} direction="row" >
+            <Grid item={true} sm ={6}>
                 <h2>{props.ActiveTasksLabel}</h2>
                 <List>
                     {activetaskList}
                 </List>
             </Grid>
-            <Grid item={true} xs ={5}>
+            <Grid item={true} sm ={6}>
             <h2>{props.CompletedTasksLabel}</h2>
             <List>
                 {completedtaskList}
