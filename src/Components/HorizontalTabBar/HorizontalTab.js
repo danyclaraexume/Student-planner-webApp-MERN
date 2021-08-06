@@ -18,6 +18,7 @@ const TabBar = (props) => {
                     {
                         position:'sticky', 
                         backgroundColor:'rgb(39, 43, 46)', 
+                        boxShadow: '2px 2px 2px 2px dark-grey',
                         zIndex: 1
                     }
                 }>

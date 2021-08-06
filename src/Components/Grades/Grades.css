@@ -1,0 +1,25 @@
+.stats {
+    height: 60vh;
+}
+
+.gpaGraph {
+    border: 1px solid black;
+    width: 60%;
+    float: left;
+    margin-right: 2rem;
+    padding: 1rem;
+    height: 60vh;
+}
+
+.topGrades {
+    border: 1px solid black;
+    width: 30%;
+    padding: 1rem;
+    height: 60vh;
+    float: left;
+}
+
+.grades-wrapper {
+    height: 1200px;
+    padding: 3rem;
+}

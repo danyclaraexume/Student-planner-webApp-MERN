@@ -34,7 +34,7 @@ function App() {
       <Grid container direction="column">
         <Grid item className='header'>
           <div>
-            <AppBar position="static"  style={{backgroundColor:'rgb(67, 76, 83)'}}>
+            <AppBar position="static"  style={{background: 'linear-gradient(rgb(39, 43, 46),rgb(49, 64, 75))'}}>
               <Toolbar>
                 <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleHideMenu}>
                   <MenuIcon />

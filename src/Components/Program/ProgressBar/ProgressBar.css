@@ -1,0 +1,31 @@
+.progressBar-wrapper {
+    width: 100%;
+    margin-bottom: 15rem;
+}
+
+.progressBar-full {
+    border: 2px solid black;
+    width: 50%;
+    height: 30px;
+    float: left;
+    margin-top: 2rem;
+}
+
+.progressBar-part {
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.progressBar-legend {
+    margin-left: 5rem;
+    width: 40%;
+    float: left;
+}
+
+.colorBox {
+    padding: 10px;
+    height: 10px;
+    margin-right: 1rem;
+    border: 1px solid black
+}

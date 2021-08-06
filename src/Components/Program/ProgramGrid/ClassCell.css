@@ -1,0 +1,10 @@
+.classCell {
+    width: 120px;
+    height: 60px;
+    float: left;
+    margin: 1rem;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px 5px;
+}

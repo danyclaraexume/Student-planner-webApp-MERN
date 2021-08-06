@@ -16,7 +16,7 @@ const Navigation = (props) => {
             <div className="navbar"> 
                 <div className="closeButton">
                     <IconButton edge="start" aria-label="menu" onClick={props.handleHideMenu}>
-                        <CloseIcon/>
+                        <CloseIcon className="closeIcon" />
                     </IconButton>
                 </div>
                 <div className="menuList">

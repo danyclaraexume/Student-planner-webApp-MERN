@@ -1,9 +1,10 @@
 .sidebar {
     border:solid 1px rgb(87, 92, 98);
     width: 20%;
-    background-color: rgb(175, 195, 202);
+    background-color: rgb(2, 26, 36);
     float:left;
-    height: 99vh;
+    height: 80vh;
+    color:rgb(156, 189, 218);
 }
 
 .notesHeader {
@@ -11,12 +12,12 @@
     justify-content: space-between;
     padding-left: 1rem;
     padding-right: 1rem;
-    box-shadow: 2px 2px 2px;
-    background-color: rgb(140, 153, 158);
+    box-shadow: 1px 1px 1px 1px;
+    background-color: rgb(30, 39, 44);
 }
 
 .noteItem {
-    padding: 1rem;
+    padding: 2rem;
     border-bottom: solid 1px grey;
 }
 
@@ -26,7 +27,7 @@
 
 .noteItem p {
     margin-top: 0;
-    color: rgb(41, 42, 42);
+    color: rgb(126, 170, 172);
 }
 
 
@@ -39,7 +40,7 @@ button {
     font-size: 16px;
     font-family: inherit;
     cursor: pointer;
-    color: rgb(3, 74, 110);
+    color: rgb(52, 145, 192);
   }
   button:hover {
     color: rgb(86, 90, 95);
@@ -50,19 +51,20 @@ button {
 .no-active-note {
     border: solid 1px rgb(122, 122, 122);
     padding-left: 50%;
-    box-shadow: 2px 2px 2px 2px;
+    box-shadow: 1px 1px 1px 1px grey;
     font-size: 24px;
     text-shadow: 1px 1px #066a99;
-    height: 98vh;
+    height: 80vh;
 
 }
 
 .note-editor-wrapper {
-   background-color:  rgba(63, 74, 78, 0.623);
+    background-color:  rgb(9, 36, 49);
+    box-shadow: 1px 1px 1px 1px rgb(68, 68, 68);
     width: 75%;
     padding-left: 1rem;
     float:left;
-    height: 100vh;
+    height: 80vh;
 }
 
 .note-editor, .note-preview {
@@ -72,13 +74,19 @@ button {
 
 .note-editor input {
     height: 50px;
-    font-size: 2rem;
+    font-size: 20px;
+    font-weight: bold;
+    color:rgb(215, 230, 250);
+    background: transparent;
+    border-bottom: 1px solid #c0d2db;
+    border-top: none;
+    border-left: none;
+    border-right: none;
   }
 
 .note-editor input,
 textarea {
   display: block;
-  border: 1px solid #ddd;
   margin-bottom: 20px;
   width: 98%;
   padding: 10px;
@@ -89,9 +97,12 @@ textarea {
 
 textarea {
     height: 40vh;
+    background-color: #c0d2db;
+
 }
 
 .note-preview {
     width: 98%;
+    color: #e8edf0;
 }
 
