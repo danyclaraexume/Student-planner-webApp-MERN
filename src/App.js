@@ -32,7 +32,7 @@ function App() {
   return (
     <Router>   
       <Grid container direction="column">
-        <Grid item className='header'>
+        <Grid item className='header' onClick={showMenu && handleHideMenu}>
           <div>
             <AppBar position="static"  style={{background: 'linear-gradient(rgb(39, 43, 46),rgb(49, 64, 75))'}}>
               <Toolbar>
@@ -48,8 +48,8 @@ function App() {
           </div>
         </Grid>
         <Grid item container >
-          <Grid item xs ={menuWidth} className={showMenu ? "leftsidebar active": "leftsidebar"}><Navigation handleHideMenu ={handleHideMenu} /></Grid> 
-          <Grid item xs={larger} className='content'>
+          <Grid item xs ={menuWidth} className={showMenu ? "leftsidebar active": "leftsidebar"}><Navigation handleHideMenu = {handleHideMenu} /></Grid> 
+          <Grid item xs={larger} className='content' onClick={showMenu && handleHideMenu}>
             <Switch>
               <Route exact path='/'>
                   <HomePage/>
@@ -66,7 +66,7 @@ function App() {
             </Switch>
           </Grid>
         </Grid>
-        <Grid item className='footer'><h1>Footer</h1></Grid>
+        <Grid item className='footer' onClick={showMenu && handleHideMenu}><h1>Footer</h1></Grid>
       </Grid>
     </Router>
   );
