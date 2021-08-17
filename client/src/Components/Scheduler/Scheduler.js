@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const SchedulerClass = () => {
+const Scheduler = () => {
     return(
         <div>
             <h2>Scheduler</h2>
@@ -8,4 +8,4 @@ const SchedulerClass = () => {
     ) 
 }
 
-export default SchedulerClass;
+export default Scheduler;

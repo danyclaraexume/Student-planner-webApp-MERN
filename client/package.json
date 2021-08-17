@@ -5,15 +5,20 @@
   "dependencies": {
     "@devexpress/dx-react-core": "^2.7.4",
     "@devexpress/dx-react-scheduler": "^2.7.4",
+    "@syncfusion/ej2-react-grids": "^19.2.55",
+    "@syncfusion/ej2-react-schedule": "^19.2.55",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.6.0",
     "bootstrap": "^5.0.2",
+    "chart.js": "^3.5.0",
     "react": "^17.0.1",
     "react-bootstrap": "^2.0.0-beta.4",
+    "react-chartjs-2": "^3.0.4",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "scheduler-react": "^2.0.20",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
@@ -30,14 +35,16 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
+      ">0.3%",
+      "not ie 11",
       "not dead",
       "not op_mini all"
     ],
     "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+      ">0.3%",
+      "not ie 11",
+      "not dead",
+      "not op_mini all"
     ]
   }
 }
